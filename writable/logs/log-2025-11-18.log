@@ -1,0 +1,212 @@
+ERROR - 2025-11-18 04:26:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\FERLY\2025\PERKIM\satria\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\FERLY\2025\PERKIM\satria\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2025-11-18 04:27:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL DEFAULT 'petugas',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETI...' at line 5 in D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\FERLY\2025\PERKIM\satria\app\Database\Migrations\2025-11-18-042515_SatriaTable.php(43): CodeIgniter\Database\Forge->createTable('users', true)
+#5 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(865): App\Database\Migrations\CreateSatriaTables->up()
+#6 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\FERLY\2025\PERKIM\satria\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2025-11-18 04:52:25 --> ErrorException: Declaration of App\Models\PemohonModel::update($id = null, $data = null) must be compatible with CodeIgniter\Model::update($id = null, $row = null): bool
+in APPPATH\Models\PemohonModel.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-11-18 05:14:34 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\FERLY\2025\PERKIM\satria\app\Controllers\Usulan.php(87): CodeIgniter\Model->insert(Array)
+#8 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#9 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#10 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\FERLY\2025\PERKIM\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#13 {main}
+CRITICAL - 2025-11-18 05:14:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (:nama:, :nik:, :alamat:, :no_hp:, :email:, :jenis_pemohon:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usulan.php(87): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 05:14:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:14:34\', \'2025-11-18 05:14:34\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:14:34\', \'2025-11-18 05:14:34\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (:nama:, :nik:, :alamat:, :no_hp:, :email:, :jenis_pemohon:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usulan.php(87): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 05:14:34 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:14:34\', \'2025-11-18 05:14:34\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:14:34\', \'2025-11-18 05:14:34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:14:34\', \'2025-11-18 05:14:34\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (:nama:, :nik:, :alamat:, :no_hp:, :email:, :jenis_pemohon:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usulan.php(87): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+ERROR - 2025-11-18 05:15:38 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\FERLY\2025\PERKIM\satria\app\Controllers\Usulan.php(87): CodeIgniter\Model->insert(Array)
+#8 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#9 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#10 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\FERLY\2025\PERKIM\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\FERLY\2025\PERKIM\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#13 {main}
+CRITICAL - 2025-11-18 05:15:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (:nama:, :nik:, :alamat:, :no_hp:, :email:, :jenis_pemohon:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usulan.php(87): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 05:15:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:15:38\', \'2025-11-18 05:15:38\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:15:38\', \'2025-11-18 05:15:38\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (:nama:, :nik:, :alamat:, :no_hp:, :email:, :jenis_pemohon:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usulan.php(87): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 05:15:38 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:15:38\', \'2025-11-18 05:15:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:15:38\', \'2025-11-18 05:15:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (\'Ferly Pangemanan\', \'7173020900000001\', \'Matani\', \'082983982398\', \'ferlypangemanancisco@gmail.com\', \'perorangan\', \'2025-11-18 05:15:38\', \'2025-11-18 05:15:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pemohon` (`nama`, `nik`, `alamat`, `no_hp`, `email`, `jenis_pemohon`, `created_at`, `updated_at`) VALUES (:nama:, :nik:, :alamat:, :no_hp:, :email:, :jenis_pemohon:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usulan.php(87): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+ERROR - 2025-11-18 05:17:54 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+CRITICAL - 2025-11-18 05:51:45 --> ParseError: syntax error, unexpected single-quoted string ">Lihat Detail</a>";", expecting ")"
+in APPPATH\Controllers\Usulan.php on line 516.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\FERLY\\2025\\PERKIM\\satria\\app\\Controllers\\Usulan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Usulan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Usulan')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\Usulan', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 05:55:13 --> ErrorException: Cannot redeclare App\Controllers\Usulan::manage()
+in APPPATH\Controllers\Usulan.php on line 525.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-18 05:57:29 --> ErrorException: Declaration of App\Models\PemohonModel::update($id = null, $data = null) must be compatible with CodeIgniter\Model::update($id = null, $row = null): bool
+in APPPATH\Models\PemohonModel.php on line 53.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-18 05:58:04 --> ErrorException: Declaration of App\Models\PemohonModel::update($id = null, $data = null) must be compatible with CodeIgniter\Model::update($id = null, $row = null): bool
+in APPPATH\Models\PemohonModel.php on line 53.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-18 05:58:11 --> ErrorException: Undefined array key "pager"
+in APPPATH\Controllers\Usulan.php on line 309.
+ 1 APPPATH\Controllers\Usulan.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pager"', 'D:\\FERLY\\2025\\PERKIM\\satria\\app\\Controllers\\Usulan.php', 309)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->manage()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 06:02:38 --> ParseError: syntax error, unexpected single-quoted string ") : ", expecting "]"
+in APPPATH\Views\backend\usulan\index.php on line 617.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('backend/usulan/index', [], true)
+ 3 APPPATH\Controllers\Usulan.php(318): view('backend/usulan/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->manage()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+CRITICAL - 2025-11-18 06:05:39 --> ErrorException: Undefined array key "nik"
+in APPPATH\Views\backend\usulan\index.php on line 186.
+ 1 APPPATH\Views\backend\usulan\index.php(186): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'D:\\FERLY\\2025\\PERKIM\\satria\\app\\Views\\backend\\usulan\\index.php', 186)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\FERLY\\2025\\PERKIM\\satria\\app\\Views\\backend\\usulan\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('backend/usulan/index', [], true)
+ 5 APPPATH\Controllers\Usulan.php(318): view('backend/usulan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->manage()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PERKIM\\satria\\public\\index.php')
+ERROR - 2025-11-18 06:12:06 --> Telegram: Bot token atau chat ID tidak ditemukan di .env

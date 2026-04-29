@@ -1,0 +1,376 @@
+ERROR - 2025-11-28 08:45:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'satria', 3306, '', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#11 {main}
+CRITICAL - 2025-11-28 08:45:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usulan`
+WHERE `nomor_tiket` = :nomor_tiket:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+ERROR - 2025-11-28 08:46:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'satria', 3306, '', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#11 {main}
+CRITICAL - 2025-11-28 08:46:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usulan`
+WHERE `nomor_tiket` = :nomor_tiket:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+ERROR - 2025-11-28 08:47:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'satria', 3306, '', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#11 {main}
+CRITICAL - 2025-11-28 08:47:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usulan`
+WHERE `nomor_tiket` = :nomor_tiket:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+ERROR - 2025-11-28 08:47:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'satria', 3306, '', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#11 {main}
+CRITICAL - 2025-11-28 08:47:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usulan`
+WHERE `nomor_tiket` = :nomor_tiket:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+ERROR - 2025-11-28 08:47:44 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=12676 in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'D:\\FERLY\\2025\\P...', 185)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'satria', 3306, '', 0)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#7 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'satria', 3306, '', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 D:\FERLY\2025\PUPR\satria\app\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#11 {main}
+CRITICAL - 2025-11-28 08:47:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usulan`
+WHERE `nomor_tiket` = :nomor_tiket:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Tracking.php(52): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Tracking->lookup()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracking))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+INFO - 2025-11-28 10:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-28 10:46:28 --> mysqli_sql_exception: Unknown column 'is_verified' in 'field list' in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1803): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\FERLY\2025\PUPR\satria\app\Database\Seeds\AuthSeeder.php(30): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\Seeder.php(145): App\Database\Seeds\AuthSeeder->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\FERLY\2025\PUPR\satria\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-11-28 10:47:01 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1803): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', NULL, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\FERLY\2025\PUPR\satria\app\Database\Seeds\AuthSeeder.php(28): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\Seeder.php(145): App\Database\Seeds\AuthSeeder->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\FERLY\2025\PUPR\satria\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+INFO - 2025-11-28 10:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-28 10:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-28 10:48:02 --> mysqli_sql_exception: Unknown column 'email' in 'where clause' in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 D:\FERLY\2025\PUPR\satria\app\Models\UserModel.php(25): CodeIgniter\BaseModel->first()
+#7 D:\FERLY\2025\PUPR\satria\app\Libraries\AuthLibrary.php(36): App\Models\UserModel->findByEmailOrUsername('admin')
+#8 D:\FERLY\2025\PUPR\satria\app\Controllers\AuthController.php(32): App\Libraries\AuthLibrary->login('admin', '@Super#25')
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\AuthController->attemptLogin()
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#11 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#14 {main}
+CRITICAL - 2025-11-28 10:48:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+OR `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(25): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Libraries\AuthLibrary.php(36): App\Models\UserModel->findByEmailOrUsername('admin')
+ 6 APPPATH\Controllers\AuthController.php(32): App\Libraries\AuthLibrary->login('admin', '@Super#25')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\AuthController->attemptLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-28 10:48:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+OR `username` = \'admin\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+OR `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+OR `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(25): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Libraries\AuthLibrary.php(36): App\Models\UserModel->findByEmailOrUsername('admin')
+ 8 APPPATH\Controllers\AuthController.php(32): App\Libraries\AuthLibrary->login('admin', '@Super#25')
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\AuthController->attemptLogin()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-28 10:48:02 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+OR `username` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+OR `username` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+OR `username` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+OR `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(25): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Libraries\AuthLibrary.php(36): App\Models\UserModel->findByEmailOrUsername('admin')
+ 9 APPPATH\Controllers\AuthController.php(32): App\Libraries\AuthLibrary->login('admin', '@Super#25')
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\AuthController->attemptLogin()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+INFO - 2025-11-28 10:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-28 10:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-28 10:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-28 10:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-28 10:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

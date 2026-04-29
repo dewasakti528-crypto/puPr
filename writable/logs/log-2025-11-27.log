@@ -1,0 +1,907 @@
+ERROR - 2025-11-27 20:38:14 --> File sertifikat too large: 6345061 bytes
+ERROR - 2025-11-27 20:38:14 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+ERROR - 2025-11-27 20:50:31 --> mysqli_sql_exception: Column 'kecamatan' cannot be null in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(133): CodeIgniter\Model->insert(Array)
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#13 {main}
+CRITICAL - 2025-11-27 20:50:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kecamatan' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (:pemohon_id:, :alamat_lokasi:, :kelurahan:, :kecamatan:, :koordinat_lat:, :koordinat_lng:, :luas_tanah:, :zona_rtrw:, :kdb:, :klb:, :jenis_bangunan:, :tinggi_bangunan:, :luas_bangunan:, :jumlah_lantai:, :status:, :nomor_tiket:, :submitted_at:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usulan.php(133): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 20:50:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kecamatan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (3, \'kolongan\', \'Kolongan\', NULL, 1.322295, 124.838148, 86, \'Pasal 70\', NULL, NULL, \'rumah\', 3, 80, 1, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (3, \'kolongan\', \'Kolongan\', NULL, 1.322295, 124.838148, 86, \'Pasal 70\', NULL, NULL, \'rumah\', 3, 80, 1, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (:pemohon_id:, :alamat_lokasi:, :kelurahan:, :kecamatan:, :koordinat_lat:, :koordinat_lng:, :luas_tanah:, :zona_rtrw:, :kdb:, :klb:, :jenis_bangunan:, :tinggi_bangunan:, :luas_bangunan:, :jumlah_lantai:, :status:, :nomor_tiket:, :submitted_at:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usulan.php(133): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 20:50:31 --> [Caused by] mysqli_sql_exception: Column 'kecamatan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (3, \'kolongan\', \'Kolongan\', NULL, 1.322295, 124.838148, 86, \'Pasal 70\', NULL, NULL, \'rumah\', 3, 80, 1, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (3, \'kolongan\', \'Kolongan\', NULL, 1.322295, 124.838148, 86, \'Pasal 70\', NULL, NULL, \'rumah\', 3, 80, 1, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (3, \'kolongan\', \'Kolongan\', NULL, 1.322295, 124.838148, 86, \'Pasal 70\', NULL, NULL, \'rumah\', 3, 80, 1, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\', \'2025-11-27 20:50:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (:pemohon_id:, :alamat_lokasi:, :kelurahan:, :kecamatan:, :koordinat_lat:, :koordinat_lng:, :luas_tanah:, :zona_rtrw:, :kdb:, :klb:, :jenis_bangunan:, :tinggi_bangunan:, :luas_bangunan:, :jumlah_lantai:, :status:, :nomor_tiket:, :submitted_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usulan.php(133): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+ERROR - 2025-11-27 20:54:00 --> mysqli_sql_exception: Column 'kecamatan' cannot be null in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(133): CodeIgniter\Model->insert(Array)
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#13 {main}
+CRITICAL - 2025-11-27 20:54:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kecamatan' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (:pemohon_id:, :alamat_lokasi:, :kelurahan:, :kecamatan:, :koordinat_lat:, :koordinat_lng:, :luas_tanah:, :zona_rtrw:, :kdb:, :klb:, :jenis_bangunan:, :tinggi_bangunan:, :luas_bangunan:, :jumlah_lantai:, :status:, :nomor_tiket:, :submitted_at:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usulan.php(133): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 20:54:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kecamatan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (4, \'matani 3\', \'Matani Tiga\', NULL, 1.319776, 124.838722, 154, \'Pasal 70\', NULL, NULL, \'rumah\', 4, 100, 2, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (4, \'matani 3\', \'Matani Tiga\', NULL, 1.319776, 124.838722, 154, \'Pasal 70\', NULL, NULL, \'rumah\', 4, 100, 2, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (:pemohon_id:, :alamat_lokasi:, :kelurahan:, :kecamatan:, :koordinat_lat:, :koordinat_lng:, :luas_tanah:, :zona_rtrw:, :kdb:, :klb:, :jenis_bangunan:, :tinggi_bangunan:, :luas_bangunan:, :jumlah_lantai:, :status:, :nomor_tiket:, :submitted_at:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usulan.php(133): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 20:54:00 --> [Caused by] mysqli_sql_exception: Column 'kecamatan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (4, \'matani 3\', \'Matani Tiga\', NULL, 1.319776, 124.838722, 154, \'Pasal 70\', NULL, NULL, \'rumah\', 4, 100, 2, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (4, \'matani 3\', \'Matani Tiga\', NULL, 1.319776, 124.838722, 154, \'Pasal 70\', NULL, NULL, \'rumah\', 4, 100, 2, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (4, \'matani 3\', \'Matani Tiga\', NULL, 1.319776, 124.838722, 154, \'Pasal 70\', NULL, NULL, \'rumah\', 4, 100, 2, \'submitted\', \'KRK-2025-0003\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\', \'2025-11-27 20:54:00\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usulan` (`pemohon_id`, `alamat_lokasi`, `kelurahan`, `kecamatan`, `koordinat_lat`, `koordinat_lng`, `luas_tanah`, `zona_rtrw`, `kdb`, `klb`, `jenis_bangunan`, `tinggi_bangunan`, `luas_bangunan`, `jumlah_lantai`, `status`, `nomor_tiket`, `submitted_at`, `created_at`, `updated_at`) VALUES (:pemohon_id:, :alamat_lokasi:, :kelurahan:, :kecamatan:, :koordinat_lat:, :koordinat_lng:, :luas_tanah:, :zona_rtrw:, :kdb:, :klb:, :jenis_bangunan:, :tinggi_bangunan:, :luas_bangunan:, :jumlah_lantai:, :status:, :nomor_tiket:, :submitted_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usulan.php(133): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+ERROR - 2025-11-27 20:57:18 --> File sertifikat too large: 6345061 bytes
+ERROR - 2025-11-27 20:57:18 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+ERROR - 2025-11-27 21:05:07 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+ERROR - 2025-11-27 21:08:31 --> File sertifikat too large: 6345061 bytes
+ERROR - 2025-11-27 21:08:31 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+ERROR - 2025-11-27 21:17:58 --> File sertifikat too large: 6345061 bytes
+ERROR - 2025-11-27 21:17:58 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+CRITICAL - 2025-11-27 21:27:56 --> ErrorException: finfo_file(C:\xampp\tmp\php5CE3.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php5CE3.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php5CE3.tmp')
+ 3 APPPATH\Controllers\Usulan.php(188): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:27:56 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php5CE3.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(188): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 21:28:20 --> ErrorException: finfo_file(C:\xampp\tmp\phpBA94.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpBA94.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpBA94.tmp')
+ 3 APPPATH\Controllers\Usulan.php(188): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:28:20 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpBA94.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(188): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 21:33:58 --> ErrorException: finfo_file(C:\xampp\tmp\phpE17F.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpE17F.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpE17F.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:33:58 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpE17F.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 21:35:44 --> ErrorException: finfo_file(C:\xampp\tmp\php805B.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php805B.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php805B.tmp')
+ 3 APPPATH\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:35:44 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php805B.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 21:43:00 --> ErrorException: finfo_file(C:\xampp\tmp\php2856.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php2856.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php2856.tmp')
+ 3 APPPATH\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:43:00 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php2856.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 21:44:44 --> ErrorException: finfo_file(C:\xampp\tmp\phpBC36.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpBC36.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpBC36.tmp')
+ 3 APPPATH\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:44:44 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpBC36.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 21:49:53 --> ErrorException: finfo_file(C:\xampp\tmp\php769C.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php769C.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php769C.tmp')
+ 3 APPPATH\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 21:49:54 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php769C.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(196): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:12:51 --> ErrorException: finfo_file(C:\xampp\tmp\php73ED.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php73ED.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php73ED.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:12:51 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php73ED.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:14:24 --> ErrorException: finfo_file(C:\xampp\tmp\phpE149.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpE149.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpE149.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:14:24 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpE149.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:15:15 --> ErrorException: finfo_file(C:\xampp\tmp\phpA91E.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpA91E.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpA91E.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:15:15 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpA91E.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:16:15 --> ErrorException: finfo_file(C:\xampp\tmp\php914D.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php914D.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php914D.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:16:15 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php914D.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:19:01 --> ErrorException: finfo_file(C:\xampp\tmp\php1AC8.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php1AC8.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php1AC8.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:19:01 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php1AC8.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:19:19 --> ErrorException: finfo_file(C:\xampp\tmp\php63A9.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php63A9.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php63A9.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:19:19 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php63A9.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:22:51 --> ErrorException: finfo_file(C:\xampp\tmp\php9D5A.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php9D5A.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php9D5A.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:22:51 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php9D5A.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:23:44 --> ErrorException: finfo_file(C:\xampp\tmp\php6F12.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php6F12.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php6F12.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:23:44 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php6F12.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:23:57 --> ErrorException: finfo_file(C:\xampp\tmp\phpA1AC.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpA1AC.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpA1AC.tmp')
+ 3 APPPATH\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:23:57 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpA1AC.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(197): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:27:18 --> ErrorException: finfo_file(C:\xampp\tmp\phpB258.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpB258.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpB258.tmp')
+ 3 APPPATH\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:27:18 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpB258.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:28:10 --> ErrorException: finfo_file(C:\xampp\tmp\php7CBE.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php7CBE.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php7CBE.tmp')
+ 3 APPPATH\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:28:10 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php7CBE.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-11-27 22:29:10 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(213): CodeIgniter\Model->insert(Array)
+#8 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#9 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#10 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#13 {main}
+CRITICAL - 2025-11-27 22:29:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (:usulan_id:, :tipe_dokumen:, :filename:, :original_name:, :mime_type:, :file_size:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usulan.php(213): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:29:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (13, \'sertifikat\', \'1764282550_feb38b50faa85442dfe2.pdf\', \'4b4d097e08a20955854fdce4ee04d37f.pdf\', \'\', 70933, \'2025-11-27 22:29:10\', \'2025-11-27 22:29:10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (13, \'sertifikat\', \'1764282550_feb38b50faa85442dfe2.pdf\', \'4b4d097e08a20955854fdce4ee04d37f.pdf\', \'\', 70933, \'2025-11-27 22:29:10\', \'2025-11-27 22:29:10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (:usulan_id:, :tipe_dokumen:, :filename:, :original_name:, :mime_type:, :file_size:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usulan.php(213): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:29:10 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (13, \'sertifikat\', \'1764282550_feb38b50faa85442dfe2.pdf\', \'4b4d097e08a20955854fdce4ee04d37f.pdf\', \'\', 70933, \'2025-11-27 22:29:10\', \'2025-11-27 22:29:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (13, \'sertifikat\', \'1764282550_feb38b50faa85442dfe2.pdf\', \'4b4d097e08a20955854fdce4ee04d37f.pdf\', \'\', 70933, \'2025-11-27 22:29:10\', \'2025-11-27 22:29:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (13, \'sertifikat\', \'1764282550_feb38b50faa85442dfe2.pdf\', \'4b4d097e08a20955854fdce4ee04d37f.pdf\', \'\', 70933, \'2025-11-27 22:29:10\', \'2025-11-27 22:29:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `dokumen` (`usulan_id`, `tipe_dokumen`, `filename`, `original_name`, `mime_type`, `file_size`, `created_at`, `updated_at`) VALUES (:usulan_id:, :tipe_dokumen:, :filename:, :original_name:, :mime_type:, :file_size:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usulan.php(213): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:33:02 --> ErrorException: finfo_file(C:\xampp\tmp\phpF028.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpF028.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\phpF028.tmp')
+ 3 APPPATH\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:33:02 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\phpF028.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:33:30 --> ErrorException: finfo_file(C:\xampp\tmp\php5C9F.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php5C9F.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php5C9F.tmp')
+ 3 APPPATH\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:33:30 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php5C9F.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-27 22:34:23 --> ErrorException: finfo_file(C:\xampp\tmp\php2E86.tmp): Failed to open stream: No such file or directory
+in SYSTEMPATH\Files\File.php on line 117.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php2E86.tmp): Failed to open stream: No such file or directory', 'D:\\FERLY\\2025\\PUPR\\satria\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 117)
+ 2 SYSTEMPATH\Files\File.php(117): finfo_file(resource (file_info), 'C:\\xampp\\tmp\\php2E86.tmp')
+ 3 APPPATH\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->save()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
+CRITICAL - 2025-11-27 22:34:23 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+finfo_file(C:\xampp\tmp\php2E86.tmp): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\FERLY\\2025\\P...', 117)
+#1 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Files\File.php(117): finfo_file(Resource id #170, 'C:\\xampp\\tmp\\ph...')
+#2 D:\FERLY\2025\PUPR\satria\app\Controllers\Usulan.php(208): CodeIgniter\Files\File->getMimeType()
+#3 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usulan->save()
+#4 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+#5 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\FERLY\2025\PUPR\satria\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 D:\FERLY\2025\PUPR\satria\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\P...')
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-11-27 22:36:17 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+ERROR - 2025-11-27 22:36:22 --> Telegram: Bot token atau chat ID tidak ditemukan di .env
+CRITICAL - 2025-11-27 22:37:10 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "D:\FERLY\2025\PUPR\satria\writable\uploads/dokumen/3"
+in SYSTEMPATH\Files\File.php on line 49.
+ 1 SYSTEMPATH\Files\File.php(49): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('D:\\FERLY\\2025\\PUPR\\satria\\writable\\uploads/dokumen/3')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(104): CodeIgniter\Files\File->__construct('D:\\FERLY\\2025\\PUPR\\satria\\writable\\uploads/dokumen/3', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(806): CodeIgniter\HTTP\DownloadResponse->setFilePath('D:\\FERLY\\2025\\PUPR\\satria\\writable\\uploads/dokumen/3')
+ 4 APPPATH\Controllers\Usulan.php(407): CodeIgniter\HTTP\Response->download('3', null, true)
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usulan->download('3')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usulan))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\FERLY\\2025\\PUPR\\satria\\public\\index.php')
