@@ -1,0 +1,82 @@
+:root {
+        --primary-red: #ef4444;
+        --primary-purple: #7c3aed;
+        --primary-blue: #3b82f6;
+        --light-blue: #f0f9ff;
+        --dark-bg: #111827;
+      }
+
+      .dark-mode {
+        background-color: var(--dark-bg);
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .light-mode {
+        background-color: var(--light-blue);
+        color: #1f2937;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          90deg,
+          var(--primary-red),
+          var(--primary-purple),
+          var(--primary-blue)
+        );
+        background-size: 200% 200%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btn-gradient {
+        background: linear-gradient(
+          90deg,
+          var(--primary-red),
+          var(--primary-purple),
+          var(--primary-blue)
+        );
+        transition: all 0.3s ease;
+      }
+
+      .btn-gradient:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .transition-all {
+        transition: all 0.5s ease;
+      }
+
+      .navbar {
+        backdrop-filter: blur(10px);
+      }
+
+      .status-verified {
+        background-color: #10b981;
+        color: white;
+      }
+
+      .status-pending {
+        background-color: #f59e0b;
+        color: white;
+      }
+
+      .status-rejected {
+        background-color: #ef4444;
+        color: white;
+      }
+
+      .hidden {
+        display: none !important;
+      }

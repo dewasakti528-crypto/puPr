@@ -1,0 +1,124 @@
+:root {
+        --primary-red: #ef4444;
+        --primary-purple: #7c3aed;
+        --primary-blue: #3b82f6;
+        --light-blue: #f0f9ff;
+        --dark-bg: #111827;
+      }
+
+      .dark-mode {
+        background-color: var(--dark-bg);
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .light-mode {
+        background-color: var(--light-blue);
+        color: #1f2937;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          90deg,
+          var(--primary-red),
+          var(--primary-purple),
+          var(--primary-blue)
+        );
+        background-size: 200% 200%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Hero Section Background */
+      .hero-bg {
+        background-image: 
+          linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0.5), 
+            rgba(59, 130, 246, 0.7)
+          ),
+          url('/assets/img/tomohonview.JPG');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+      }
+
+      /* Enhanced text readability on hero section */
+      .hero-bg h1,
+      .hero-bg p {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .btn-gradient {
+        background: linear-gradient(
+          90deg,
+          var(--primary-red),
+          var(--primary-purple),
+          var(--primary-blue)
+        );
+        transition: all 0.3s ease;
+      }
+
+      .btn-gradient:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .map-container {
+        height: 600px;
+        width: 100%;
+      }
+
+      .sidebar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 300px;
+      }
+
+      .dark-mode .sidebar {
+        background: rgba(30, 41, 59, 0.9);
+        color: white;
+      }
+
+      .info-panel {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        max-width: 400px;
+      }
+
+      .dark-mode .info-panel {
+        background: rgba(30, 41, 59, 0.9);
+        color: white;
+      }
+
+      .transition-all {
+        transition: all 0.5s ease;
+      }
+
+      .navbar {
+        backdrop-filter: blur(10px);
+      }

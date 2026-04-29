@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+		"name": "SATRIA Usulan Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Submit Usulan (Dummy Data)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Budi Santoso",
+							"type": "text"
+						},
+						{
+							"key": "nik",
+							"value": "7171010101900001",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Jl. Raya Tomohon No. 123",
+							"type": "text"
+						},
+						{
+							"key": "telepon",
+							"value": "081234567890",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "budi.santoso@example.com",
+							"type": "text"
+						},
+						{
+							"key": "jenis_pemohon",
+							"value": "perorangan",
+							"type": "text"
+						},
+						{
+							"key": "alamat_lokasi",
+							"value": "Jl. Lingkar Timur, Tomohon",
+							"type": "text"
+						},
+						{
+							"key": "kelurahan",
+							"value": "Tondangow",
+							"type": "text"
+						},
+						{
+							"key": "kecamatan",
+							"value": "Tomohon Selatan",
+							"type": "text"
+						},
+						{
+							"key": "koordinat",
+							"value": "1.265432, 124.832109",
+							"type": "text"
+						},
+						{
+							"key": "luas_tanah",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "zona",
+							"value": "Permukiman",
+							"type": "text"
+						},
+						{
+							"key": "jenis_bangunan",
+							"value": "Rumah Tinggal",
+							"type": "text"
+						},
+						{
+							"key": "tinggi_bangunan",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "luas_bangunan",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_lantai",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "kdb",
+							"value": "0.6",
+							"type": "text"
+						},
+						{
+							"key": "klb",
+							"value": "1.2",
+							"type": "text"
+						},
+						{
+							"key": "pernyataan",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sertifikat",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "ktp",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "gambar",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "lainnya",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/usulan/save",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"usulan",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
