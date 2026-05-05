@@ -471,8 +471,76 @@
           </p>
         </div>
 
+        
+
+<div class="flow-wrap">
+
+  <!-- START -->
+  <div class="pill-step"><div class="pill start">Mulai</div></div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-line" style="margin:0 auto"></div></div></div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-arrow"></div></div></div>
+
+  <!-- Phase: Pemohon -->
+  <div class="phase-sep">Fase 1</div>
+
+  <div class="step">
+    <div class="step-num teal">1</div>
+    <div class="step-body teal">
+      <h3>Pemohon Memasaukan Berkas di DPUPR</h3>
+      <p>Berkas yang di masukkan berupa : Formulir Permohonana, Fc/Scan KTP, Dokumen Lahan, Sketsa Denah Lokasi, Titik Kordinat dan Bukti Lunas PBB </p>
+    </div>
+  </div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-line" style="margin:0 auto"></div></div></div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-arrow"></div></div></div>
+
+  <div class="step">
+    <div class="step-num teal">2</div>
+    <div class="step-body teal">
+      <h3>Berkas/Data Masuk di DPUPRD Pada Bidang Tata Ruang</h3>
+      <p>Setelah itu tim persiapan untuk survey lokasi</p>
+    </div>
+  </div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-line" style="margin:0 auto"></div></div></div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-arrow"></div></div></div>
+
+  <!-- Phase: Sistem -->
+  <div class="phase-sep">Fase 2</div>
+
+  <div class="step">
+    <div class="step-num purple">3</div>
+    <div class="step-body purple">
+      <h3>Survey Lokasi</h3>
+      <p>Tim PUPR bidang tata ruang survey lokasi untuk pemgambilan titik koordinat lahan dan dokumentasi kondisi eksisting</p>
+    </div>
+  </div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-line" style="margin:0 auto"></div></div></div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-arrow"></div></div></div>
+
+  <div class="step">
+    <div class="step-num purple">4</div>
+    <div class="step-body purple">
+      <h3>Buat KRK</h3>
+      <p>Tim PUPR bidang tata ruang memebuat peta hasil survey dan membuat dokumen KRK</p>
+    </div>
+  </div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-line" style="margin:0 auto"></div></div></div>
+  <div class="connector"><div class="conn-dot-col"><div class="conn-arrow"></div></div></div>
+
+  <!-- Phase: Pengajuan -->
+  <div class="phase-sep">Fase 3</div>
+
+  <div class="step">
+    <div class="step-num teal">5</div>
+    <div class="step-body teal">
+      <h3>KRK Selesai</h3>
+      <p>KRK Selesai dibuat dan diserahkan kepada pemohon secara fisik atau dikirim pdf.</p>
+    </div>
+  </div>
+
         <div class="flex justify-center mb-10" data-aos="zoom-in" data-aos-delay="100">
           <div class="w-full max-w-xl md:max-w-2xl lg:max-w-3xl rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-900">
+
+
             <img
               src="<?=base_url('assets/img/satria-sop.jpeg')?>"
               alt="Alur SOP Layanan KRK"
