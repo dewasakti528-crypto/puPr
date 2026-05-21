@@ -1,4 +1,8 @@
 // Initialize AOS
+
+let satriaData = [];
+let map;
+
 AOS.init({
   duration: 800,
   once: true,
@@ -62,11 +66,10 @@ $(document).ready(function () {
 // Initialize Mapbox Map
 document.addEventListener("DOMContentLoaded", function () {
   // Mapbox Access Token
-  mapboxgl.accessToken =
-    "pk.eyJ1IjoiZG9vbXNkYXJrIiwiYSI6ImNscjYyZ204eDI2dmoyaXRheGI1aTE1ajQifQ.6sV5MpXG0jYJRpd0cO8SzA";
+  mapboxgl.accessToken = "pk.eyJ1IjoiZG9vbXNkYXJrIiwiYSI6ImNscjYyZ204eDI2dmoyaXRheGI1aTE1ajQifQ.6sV5MpXG0jYJRpd0cO8SzA";
 
   // Create map
-  const map = new mapboxgl.Map({
+  map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/streets-v12",
     center: [124.8399, 1.3233], // Tomohon coordinates
@@ -100,6 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function addZoningAndKawasanLayers() {
     // Determine base URL from layout data attribute or default
     const baseUrl = document.body.dataset.url || "";
+
+    fetch(`${baseUrl}assets/geojson/satria.json`)
+      .then(res => res.json())
+      .then(data => { satriaData = data; })
+      .catch(err => console.warn("satria.json failed:", err));
 
     fetch(`${baseUrl}assets/geojson/geodata.geojson`)
       .then((res) => {
@@ -222,6 +230,30 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  function getPopupAnchor(point, map) {
+    const canvas = map.getCanvas();
+    const w = canvas.offsetWidth;
+    const h = canvas.offsetHeight;
+    const x = point.x;
+    const y = point.y;
+    const threshold = 0.35;
+  
+    const top    = y / h < threshold;
+    const bottom = y / h > (1 - threshold);
+    const left   = x / w < threshold;
+    const right  = x / w > (1 - threshold);
+  
+    if (top && left)    return 'top-left';
+    if (top && right)   return 'top-right';
+    if (bottom && left) return 'bottom-left';
+    if (bottom && right)return 'bottom-right';
+    if (top)            return 'top';
+    if (bottom)         return 'bottom';
+    if (left)           return 'left';
+    if (right)          return 'right';
+    return 'bottom';
+  }
+
   function setupMapInteractions(zoningFeatures, kawasanFeatures) {
     // Change cursor on hover
     const layers = ["zoning-fill", "kawasan-fill"];
@@ -237,17 +269,141 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click handler for Zoning
     map.on("click", "zoning-fill", function (e) {
       const props = e.features[0].properties;
-      showZoneInfo(props, "zoning");
+      const popup = buildRichPopup(props, null, e.lngLat);
+      new mapboxgl.Popup({ maxWidth: '340px', anchor: getPopupAnchor(e.point, map) })
+        .setLngLat(e.lngLat)
+        .setHTML(popup)
+        .addTo(map);
 
-      // Also check for overlapping kawasan if needed, or just show zoning info
-      // For home page, simple info is enough
+
+      // update info panel
+      const infoPanel = document.getElementById("info-panel");
+      const zoneInfo = document.getElementById("zone-info");
+      if (infoPanel && zoneInfo) {
+        infoPanel.classList.remove("hidden");
+        zoneInfo.innerHTML = buildInfoPanelContent(props);
+      }
     });
 
     // Click handler for Kawasan
     map.on("click", "kawasan-fill", function (e) {
       const props = e.features[0].properties;
-      showZoneInfo(props, "kawasan");
+      new mapboxgl.Popup({ maxWidth: '340px', anchor: getPopupAnchor(e.point, map) })
+        .setLngLat(e.lngLat)
+        .setHTML(buildRichPopup(null, props, e.lngLat))
+        .addTo(map);
     });
+  }
+
+  function getSatriaInfo(kawasanName) {
+    if (!satriaData.length || !kawasanName) return null;
+    return satriaData.find(item =>
+      item.KAWASAN_ && kawasanName &&
+      item.KAWASAN_.toLowerCase().includes(kawasanName.toLowerCase())
+    ) || null;
+  }
+
+  function getKawasanNames(props) {
+    return Object.entries(props)
+      .filter(([k, v]) => k.startsWith("KAWASAN_") && v && v !== "0")
+      .map(([k, v]) => v);
+  }
+
+  function buildRichPopup(zonaProps, kawasanProps, lngLat) {
+    let html = `<div style="font-family:sans-serif;font-size:13px;max-width:320px;">`;
+
+    if (zonaProps) {
+      const name = zonaProps.KUZ || zonaProps.ZONA || zonaProps.zona || zonaProps.name || "-";
+      const kdb = zonaProps.KDB || zonaProps.kdb || "-";
+      const klb = zonaProps.KLB || zonaProps.klb || "-";
+
+      html += `
+            <div style="background:#3b82f6;color:white;padding:8px 12px;border-radius:6px 6px 0 0;font-weight:bold;">
+                🗺️ Zona RTRW
+            </div>
+            <div style="padding:10px 12px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 6px 6px;">
+                <table style="width:100%;border-collapse:collapse;">
+                    <tr><td style="color:#6b7280;padding:3px 0;">Nama Zona</td><td style="font-weight:600;padding:3px 0;">${name}</td></tr>
+                    <tr><td style="color:#6b7280;padding:3px 0;">KDB</td><td style="padding:3px 0;">${kdb}</td></tr>
+                    <tr><td style="color:#6b7280;padding:3px 0;">KLB</td><td style="padding:3px 0;">${klb}</td></tr>
+                </table>`;
+
+      // try match to satria.json
+      const satriaMatch = getSatriaInfo(name);
+      if (satriaMatch) {
+        html += buildZonasiSection(satriaMatch);
+      }
+
+      html += `</div>`;
+    }
+
+    if (kawasanProps) {
+      const kawasanNames = getKawasanNames(kawasanProps);
+      html += `
+            <div style="background:#10b981;color:white;padding:8px 12px;border-radius:6px 6px 0 0;font-weight:bold;margin-top:8px;">
+                🏘️ Kawasan
+            </div>
+            <div style="padding:10px 12px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 6px 6px;">`;
+
+      kawasanNames.forEach(name => {
+        const satriaMatch = getSatriaInfo(name);
+        html += `<div style="font-weight:600;margin-bottom:4px;">${name}</div>`;
+        if (satriaMatch) html += buildZonasiSection(satriaMatch);
+      });
+
+      html += `</div>`;
+    }
+
+    html += `</div>`;
+    return html;
+  }
+
+  function buildZonasiSection(satriaItem) {
+    const kategori = satriaItem.KAWASAN_ || "-";
+    const subKat = satriaItem.PASAL || "-";
+    const kuz = satriaItem.KUZ || "-";
+
+    return `
+        <hr style="margin:8px 0;border-color:#e5e7eb;">
+        <div style="font-size:11px;color:#6b7280;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;">Informasi Zonasi</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+            <tr style="background:#f9fafb;">
+                <td style="padding:4px 6px;color:#6b7280;white-space:nowrap;">Kategori</td>
+                <td style="padding:4px 6px;font-weight:500;">${kategori}</td>
+            </tr>
+            <tr>
+                <td style="padding:4px 6px;color:#6b7280;white-space:nowrap;">Sub Kategori / Pasal</td>
+                <td style="padding:4px 6px;">${subKat}</td>
+            </tr>
+            <tr style="background:#f9fafb;">
+                <td style="padding:4px 6px;color:#6b7280;white-space:nowrap;vertical-align:top;">Keterangan (KUZ)</td>
+                <td style="padding:4px 6px;line-height:1.4;">${kuz}</td>
+            </tr>
+        </table>`;
+  }
+
+  function buildInfoPanelContent(props) {
+    const name = props.KUZ || props.ZONA || props.zona || props.name || "-";
+    const kdb = props.KDB || props.kdb || "-";
+    const klb = props.KLB || props.klb || "-";
+    const satriaMatch = getSatriaInfo(name);
+
+    let html = `
+        <h4 class="font-bold text-blue-600 mb-2">Zona RTRW</h4>
+        <p><strong>Nama Zona:</strong> ${name}</p>
+        <p><strong>KDB:</strong> ${kdb}</p>
+        <p><strong>KLB:</strong> ${klb}</p>`;
+
+    if (satriaMatch) {
+      html += `
+        <hr class="my-2">
+        <p class="text-xs text-gray-500 uppercase mb-1">Informasi Zonasi</p>
+        <p><strong>Kategori:</strong> ${satriaMatch.KAWASAN_ || "-"}</p>
+        <p><strong>Sub Kategori:</strong> ${satriaMatch.PASAL || "-"}</p>
+        <p class="text-xs mt-1 text-gray-600">${(satriaMatch.KUZ || "").substring(0, 120)}${satriaMatch.KUZ?.length > 120 ? "..." : ""}</p>`;
+    }
+
+    return html;
   }
 
   function showZoneInfo(props, type) {
@@ -565,3 +721,14 @@ document.addEventListener("DOMContentLoaded", function () {
     loadZoningData();
   }
 });
+
+function toggleMapFullscreen() {
+  const container = document.getElementById('map').parentElement;
+  const icon = document.getElementById('map-fullscreen-icon');
+  const isFullscreen = container.classList.toggle('map-fullscreen');
+
+  icon.className = isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
+
+  // give mapbox a moment to catch the resize
+  setTimeout(() => { if (window.map) map.resize(); }, 100);
+}

@@ -232,6 +232,14 @@
           <!-- Map Container -->
           <div id="map" class="map-container"></div>
 
+          <!-- fullscreen button -->
+          <button id="map-fullscreen-btn" onclick="toggleMapFullscreen()"
+            style="position:absolute;top:10px;left:10px;z-index:1001;background:white;border:none;
+                  border-radius:4px;padding:6px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.2);
+                  font-size:14px;" title="Fullscreen">
+            <i class="fas fa-expand" id="map-fullscreen-icon"></i>
+          </button>
+
           <!-- Sidebar Controls -->
           <div class="sidebar">
             <h3 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">
@@ -474,11 +482,6 @@
         
 
 <div class="flow-wrap">
-
-  <!-- START -->
-  <div class="pill-step"><div class="pill start">Mulai</div></div>
-  <div class="connector"><div class="conn-dot-col"><div class="conn-line" style="margin:0 auto"></div></div></div>
-  <div class="connector"><div class="conn-dot-col"><div class="conn-arrow"></div></div></div>
 
   <!-- Phase: Pemohon -->
   <div class="phase-sep">Fase 1</div>
