@@ -133,4 +133,30 @@
   height: 100vh !important;
   z-index: 9999 !important;
   border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.map-fullscreen #map {
+  height: 100vh !important;
+  border-radius: 0 !important;
+}
+
+.mapboxgl-popup {
+  z-index: 10;
+}
+
+.map-popup-open {
+  overflow: visible !important;
+}
+
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.mapboxgl-popup .mapboxgl-popup-content > div {
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

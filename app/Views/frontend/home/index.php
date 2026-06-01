@@ -612,8 +612,7 @@
                 <div>
                   <h4 class="font-medium">Alamat Kantor</h4>
                   <p class="opacity-90">
-                    Kecamatan Tomohon Tengah, Jl. Raya Tomohon No. 123, Sulawesi
-                    Utara
+                    8R65+FGJ, Woloan Satu, Kec. Tomohon Bar., Kota Tomohon, Sulawesi Utara
                   </p>
                 </div>
               </div>
@@ -648,7 +647,7 @@
                   href="#"
                   class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
                 >
-                  <i class="fab fa-twitter"></i>
+                  <i class="fa-brands fa-x-twitter"></i>
                 </a>
                 <a
                   href="#"

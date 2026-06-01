@@ -236,12 +236,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const h = canvas.offsetHeight;
     const x = point.x;
     const y = point.y;
-    const threshold = 0.35;
+    const edgePad = 0.45; // larger threshold = popup flips sooner from edge
   
-    const top    = y / h < threshold;
-    const bottom = y / h > (1 - threshold);
-    const left   = x / w < threshold;
-    const right  = x / w > (1 - threshold);
+    const top    = y / h < edgePad;
+    const bottom = y / h > (1 - edgePad);
+    const left   = x / w < edgePad;
+    const right  = x / w > (1 - edgePad);
   
     if (top && left)    return 'top-left';
     if (top && right)   return 'top-right';
@@ -267,31 +267,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Click handler for Zoning
-    map.on("click", "zoning-fill", function (e) {
+    map.on('click', 'zoning-fill', function (e) {
       const props = e.features[0].properties;
-      const popup = buildRichPopup(props, null, e.lngLat);
-      new mapboxgl.Popup({ maxWidth: '340px', anchor: getPopupAnchor(e.point, map) })
+      const mapWrapper = map.getContainer().parentElement;
+      mapWrapper.classList.add('map-popup-open');
+    
+      const popup = new mapboxgl.Popup({
+        maxWidth: '420px',   // was '340px'
+        anchor: getPopupAnchor(e.point, map)
+      })
         .setLngLat(e.lngLat)
-        .setHTML(popup)
+        .setHTML(buildRichPopup(props, null, e.lngLat))
         .addTo(map);
-
-
-      // update info panel
-      const infoPanel = document.getElementById("info-panel");
-      const zoneInfo = document.getElementById("zone-info");
+    
+      popup.on('close', () => mapWrapper.classList.remove('map-popup-open'));
+    
+      const infoPanel = document.getElementById('info-panel');
+      const zoneInfo  = document.getElementById('zone-info');
       if (infoPanel && zoneInfo) {
-        infoPanel.classList.remove("hidden");
+        infoPanel.classList.remove('hidden');
         zoneInfo.innerHTML = buildInfoPanelContent(props);
       }
     });
 
     // Click handler for Kawasan
-    map.on("click", "kawasan-fill", function (e) {
+    map.on('click', 'kawasan-fill', function (e) {
       const props = e.features[0].properties;
-      new mapboxgl.Popup({ maxWidth: '340px', anchor: getPopupAnchor(e.point, map) })
+      const mapWrapper = map.getContainer().parentElement;
+      mapWrapper.classList.add('map-popup-open');
+    
+      const popup = new mapboxgl.Popup({
+        maxWidth: '420px',   // was '340px'
+        anchor: getPopupAnchor(e.point, map)
+      })
         .setLngLat(e.lngLat)
         .setHTML(buildRichPopup(null, props, e.lngLat))
         .addTo(map);
+    
+      popup.on('close', () => mapWrapper.classList.remove('map-popup-open'));
     });
   }
 
@@ -310,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function buildRichPopup(zonaProps, kawasanProps, lngLat) {
-    let html = `<div style="font-family:sans-serif;font-size:13px;max-width:320px;">`;
+    let html = `<div style="font-family:sans-serif;font-size:13px;min-width:260px;max-width:400px;word-break:break-word;">`;
 
     if (zonaProps) {
       const name = zonaProps.KUZ || zonaProps.ZONA || zonaProps.zona || zonaProps.name || "-";
@@ -727,8 +740,8 @@ function toggleMapFullscreen() {
   const icon = document.getElementById('map-fullscreen-icon');
   const isFullscreen = container.classList.toggle('map-fullscreen');
 
+  container.style.overflow = isFullscreen ? 'visible' : 'hidden';
   icon.className = isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
 
-  // give mapbox a moment to catch the resize
   setTimeout(() => { if (window.map) map.resize(); }, 100);
 }
